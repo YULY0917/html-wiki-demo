@@ -6,9 +6,14 @@
   <title>Wiki HTML - Demo</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
+<script>
+  fetch('/html-wiki-demo/assets/menu.html')
+    .then(r => r.text())
+    .then(html => document.getElementById('menu').innerHTML = html);
+</script>
 <body>
   <div class="layout">
-    <aside class="sidebar">
+    <aside class="sidebar" id="menu"></aside>
       <div class="brand">Wiki HTML</div>
       <nav>
         <a class="active" href="index.html">Inicio</a>
