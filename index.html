@@ -1,28 +1,70 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <title>Wiki HTML</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="assets/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guías</title>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-  <div class="layout">
+
+  <header class="topbar">
+    <div class="brand"><span class="dot">gd</span> Wiki Guías</div>
+
+    <div class="search">
+      🔎 <input id="search" placeholder="Buscar..." />
+    </div>
+
+    <div class="top-actions">🏷️ 👤</div>
+  </header>
+
+  <div class="shell">
     <aside class="sidebar" id="menu"></aside>
 
-    <main class="content">
-      <h1>Wiki de ejemplo (HTML)</h1>
-      <p>
-        Esta es una wiki de prueba creada con páginas HTML enlazadas.
-      </p>
-      <p class="muted">Última actualización: enero 2026</p>
+    <main class="main">
+      <div class="breadcrumb">🏠 / <strong>guias</strong></div>
+
+      <div class="card">
+        <div class="h1">Guías</div>
+        <p class="lead">
+          Encuentra lineamientos y guías técnicas para el diseño y desarrollo de servicios digitales.
+        </p>
+      </div>
+
+      <div style="height:14px"></div>
+
+      <div class="cards">
+        <div class="card" data-card>
+          <a href="paginas/guia-1.html">Guía Técnica | Seguridad de la información y Ciberseguridad</a>
+          <p>Recomendaciones base para asegurar información, controles mínimos y buenas prácticas.</p>
+        </div>
+
+        <div class="card" data-card>
+          <a href="paginas/guia-2.html">Guía Técnica | Calidad y funcionamiento de plataformas</a>
+          <p>Lineamientos de disponibilidad, rendimiento, monitoreo y continuidad.</p>
+        </div>
+
+        <div class="card" data-card>
+          <a href="paginas/guia-3.html">Guía Técnica | Interoperabilidad</a>
+          <p>Patrones, definiciones y pasos para exponer/consumir servicios.</p>
+        </div>
+      </div>
     </main>
+
+    <aside class="right">
+      <div class="box">
+        <div class="title">Contenido de la página</div>
+        <div class="toc" id="toc"></div>
+      </div>
+
+      <div class="box">
+        <div class="title">Última edición por</div>
+        <div style="font-weight:800">Administrador</div>
+        <div class="muted">enero 2026</div>
+      </div>
+    </aside>
   </div>
 
-  <script>
-    fetch('/html-wiki-demo/assets/menu.html')
-      .then(r => r.text())
-      .then(html => document.getElementById('menu').innerHTML = html);
-  </script>
+  <script src="assets/app.js"></script>
 </body>
 </html>
