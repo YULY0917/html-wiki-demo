@@ -6,36 +6,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../assets/style.css">
 </head>
+
 <body>
   <div class="layout">
+    <!-- Menú lateral (se carga desde assets/menu.html) -->
     <aside class="sidebar" id="menu"></aside>
 
+    <!-- Contenido -->
     <main class="content">
       <h1>Guía rápida</h1>
 
-      <p>
-        Esta wiki funciona con páginas HTML enlazadas.
-      </p>
+      <p>Esta wiki funciona con páginas HTML enlazadas.</p>
 
       <h2>Agregar una página</h2>
       <ol>
         <li>Crea un archivo nuevo en <code>paginas/</code>.</li>
-        <li>Copia la estructura base.</li>
-        <li>Agrega el enlace al menú.</li>
+        <li>Copia la estructura base (layout + sidebar + content).</li>
+        <li>Agrega el enlace en el menú (<code>assets/menu.html</code>).</li>
       </ol>
 
       <h2>Documentos</h2>
       <p>
-        <a href="/html-wiki-demo/docs/archivo.pdf" target="_blank" rel="noopener">
-  📄 Descargar Manual (PDF)
-</a>
-
+        <a href="../docs/archivo.pdf" target="_blank" rel="noopener">
+          📄 Descargar Manual (PDF)
+        </a>
       </p>
 
       <p class="muted">Última actualización: enero 2026</p>
     </main>
   </div>
 
+  <!-- Script para traer el menú -->
   <script>
     fetch('/html-wiki-demo/assets/menu.html')
       .then(r => r.text())
@@ -43,3 +44,4 @@
   </script>
 </body>
 </html>
+
