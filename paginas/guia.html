@@ -1,48 +1,44 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Guía - Wiki HTML</title>
-  <link rel="stylesheet" href="../assets/style.css" />
+  <meta charset="utf-8">
+  <title>Guía rápida</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../assets/style.css">
 </head>
-  <script>
-  fetch('/html-wiki-demo/assets/menu.html')
-    .then(r => r.text())
-    .then(html => document.getElementById('menu').innerHTML = html);
-</script>
 <body>
   <div class="layout">
     <aside class="sidebar" id="menu"></aside>
-      <div class="brand">Wiki HTML</div>
-      <nav>
-        <a href="../index.html">Inicio</a>
-        <a class="active" href="guia.html">Guía</a>
-        <a href="faq.html">FAQ</a>
-        <a href="glosario.html">Glosario</a>
-      </nav>
-    </aside>
 
     <main class="content">
       <h1>Guía rápida</h1>
-      <p>Esta wiki funciona con páginas HTML enlazadas.</p>
+
+      <p>
+        Esta wiki funciona con páginas HTML enlazadas.
+      </p>
 
       <h2>Agregar una página</h2>
       <ol>
         <li>Crea un archivo nuevo en <code>paginas/</code>.</li>
-        <li>Copia la estructura (sidebar + content).</li>
-        <li>Agrega el enlace en el menú de todas las páginas.</li>
+        <li>Copia la estructura base.</li>
+        <li>Agrega el enlace al menú.</li>
       </ol>
-       <h2>Documentos</h2>
-  <p>
-    <a href="/html-wiki-demo/docs/manual.pdf" target="_blank">
-      📄 Descargar Manual (PDF)
-    </a>
-  </p>  
-      
+
+      <h2>Documentos</h2>
+      <p>
+        <a href="/html-wiki-demo/docs/manual.pdf" target="_blank">
+          📄 Descargar Manual (PDF)
+        </a>
+      </p>
+
+      <p class="muted">Última actualización: enero 2026</p>
     </main>
   </div>
+
+  <script>
+    fetch('/html-wiki-demo/assets/menu.html')
+      .then(r => r.text())
+      .then(html => document.getElementById('menu').innerHTML = html);
+  </script>
 </body>
 </html>
-
-
