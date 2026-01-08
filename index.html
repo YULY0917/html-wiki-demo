@@ -4,11 +4,33 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Wiki HTML - Demo</title>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-  <h1>Wiki HTML de prueba</h1>
-  <p>
-    Esta es una wiki de ejemplo creada solo con HTML.
-  </p>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">Wiki HTML</div>
+      <nav>
+        <a class="active" href="index.html">Inicio</a>
+        <a href="paginas/guia.html">Guía</a>
+        <a href="paginas/faq.html">FAQ</a>
+        <a href="paginas/glosario.html">Glosario</a>
+      </nav>
+      <div class="muted" style="font-size:12px; margin-top:14px;">Demo en HTML</div>
+    </aside>
+
+    <main class="content">
+      <h1>Wiki de ejemplo (HTML)</h1>
+      <p>
+        Esta es una wiki de prueba creada con páginas HTML enlazadas.
+        Sirve para practicar estructura y navegación.
+      </p>
+
+      <p>Las páginas internas viven en <code>paginas/</code>.</p>
+
+      <hr />
+      <p class="muted">Última actualización: enero 2026</p>
+    </main>
+  </div>
 </body>
 </html>
