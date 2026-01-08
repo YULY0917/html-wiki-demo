@@ -88,7 +88,7 @@ body{
   opacity:.95;
 }
 .sidebar a:hover{ background: rgba(255,255,255,.12); }
-.sidebar a.active{ background: rgba(255,255,255,.18); font-weight:800; }
+.sidebar a.active{ background: rgba(255,255,255,.18); font-weight: normal; /* o 400 */; }
 
 /* MAIN */
 .main{
