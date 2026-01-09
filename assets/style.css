@@ -260,3 +260,14 @@ body{
     height:auto;
   }
 }
+/* === LIMPIAR MENÚ LATERAL === */
+
+/* Ocultar items que NO se usan */
+.sidebar a[href*="leyes"],
+.sidebar a[href*="reglamentos"],
+.sidebar a[href*="normas"],
+.sidebar a[href*="estandares"],
+.sidebar a[href*="terminos"],
+.sidebar a[href*="manuales"] {
+  display: none;
+}
